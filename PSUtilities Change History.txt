@@ -1,0 +1,43 @@
+1.0 Original Version
+1.1 Added regex,backup package
+1.2 Corrected bugs: 1) Removed all IDataHashCursor references, 2) Due to difference in behavior between wM 4.6 and 6.x, added check for existing of field before making IDataCursor.delete() call.
+1.3 Added some extra input checking for PSUtilities.date:calculateDateDifference, PSUtilities.file:objectToFile, PSUtilities.math:compareFloats, PSUtilities.math:compareInts, PSUtilities.remote:runContextJob, PSUtilities.remote:runTContextJob
+1.4 Updated the floating point math services to address scale issue
+1.5 Disabled audit logging for all PSUtilities services, added PSUtilities.list services
+1.6 Modified PSUtilities.misc:spawnThread service to add deepClone step, added filter capability to PSUtilities.file:listFiles
+1.7 Fixed issue with listFiles filter so it checks case properly on Unix machines, added getMimeType service
+1.8 Added hashtable, formatting and additional math wrapper services.  Also removed the PSUtilities.string:convertDelimitedStringToRecordList, PSUtilities.string:convertRecordListToCsv, and PSUtilities.string:convertRecordListToDelimitedString services.  The WmFlatFile package should be used instead to parse and create flat files.
+2.0 
+12 new top level folders
+54 new services
+
+Services to cache data and lookup from backend resources for faster performance
+Services to query and sort document lists
+Services to work on all elements of a document like remove nulls recursively or invoke any other service 
+General utility services like get the type of an exception thrown by an adapter service or read configuration from an XML file.
+Consistent formatting of code across all the services for better readability.
+
+Package is backward compatible with PSUtilities 1.8 as all new services have been added into a new tree named ps.util.
+Very little overlap with the old set of services although wherever the same functionality exists the new services should
+be recommended.
+
+2.01 Fixed the ps.util.math:round service to have the proper signature and comments. Also removed the documentation from the pub/doc folder as it available separately. 
+Compiled the code again without debug symbols.
+
+2.1 Mainly webMethods 7.1 compatibility changes
+Made some changes to the cache services to remove some bugs related to nulls. Also added a new parameter to
+control duplicates in cache tables.
+
+Some internal variables have been renamed to avoid conflicts with new reserved words in Java 5.0.
+
+The services in the PSUtilities.ssl folder were using internal APIs that are either not available in Integration Server 
+7.1 or have been changed. This folder has been removed to avoid having to maintain two different versions of the PSUtilities package.
+
+Version 2.1 has been compiled with JDK 5.0 but the class files generated are still compatible with JDK 1.4 in order
+to ensure that this package can still be used with IS 6.x.
+
+2.2 Fixed bug in caching services which was causing the cache not be be refreshed. Also add encoding and charsetName capabilities 
+to the psutil.io services.
+
+2.3 Fixed some incorrect references to services that did not exist.
+ 
