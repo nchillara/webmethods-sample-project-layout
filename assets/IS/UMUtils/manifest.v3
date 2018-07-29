@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="enabled">no</value>
+  <value name="system_package">no</value>
+  <value name="version">1.0</value>
+  <null name="startup_services"/>
+  <null name="shutdown_services"/>
+  <null name="replication_services"/>
+  <null name="requires"/>
+  <null name="listACL"/>
+  <value name="webappLoad">yes</value>
+  <value name="name">UMUtils</value>
+  <value name="build"></value>
+  <value name="description"></value>
+  <value name="time">2015-06-01 11:58:04 EDT</value>
+  <value name="jvm_version">1.7.0_65</value>
+  <value name="publisher">192.168.26.40</value>
+  <value name="patch_nums"></value>
+</Values>
